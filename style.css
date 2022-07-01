@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*  CSS RESET */
 *{
     margin:0;
     padding: 0;
@@ -7,6 +9,12 @@
     text-decoration: none;
     outline: none;
 }
+
+/* smooth scroll */
+html{
+    scroll-behavior: smooth;
+}
+
 /*utility classes*/
 .text-secondary{
     color: #fec544;
@@ -26,6 +34,22 @@
 }
 .btn-md:hover{
     color: #fec544;
+    background: none;
+}
+.btn-xs{
+    display: inline-block;
+    background: #070808;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 8px 36px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid #070808;
+    transition: all 0.5s ease;
+}
+.btn-xs:hover{
+    color: #070808;
     background: none;
 }
 .container{
@@ -60,14 +84,23 @@
     display: block;
     transform: translateY(1px);
 }
+
 .about .about-content,
-.services .service-content{
+.services .service-content,
+.skills .skill-content,
+.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     transform: translateY(-60px);
 }
+section{
+    padding: 40px 0;
+    background: #fec544;
+
+}
+
 
 /*showcase  background*/
 .showcase{
@@ -78,6 +111,7 @@
     width: 100%;
     height: 100vh;
 }
+
 
 /*navbar section*/
 .navbar{
@@ -123,7 +157,7 @@
 }
 
  /*showcase contents section*/
- .showcase-text{
+.showcase-text{
      max-width: 800px;
      padding-top: 250px;
      padding-left: 120px;
@@ -220,7 +254,7 @@
 
  /*services section styling*/
  #services{
-     color: #A9AD88;
+     color: white;
      background: #fec544;    
  }
  .services h5{
@@ -324,4 +358,226 @@
 }
 .main:hover .shadowone{
     transform: translateY(-25px);
+}
+ 
+
+
+/* My Skills Section */
+#skills{
+    background: #070808;
+}
+.skills h1{
+    color: #6e6e70;
+    text-align: center;
+    font-size: 80px;
+    transform: translateY(20px);
+    opacity: 0.1;
+    padding-top: -20px;
+}
+.skills h5{
+    font-weight: 700;
+    transform: translateY(-65px);
+}
+.skills .title::before{
+    background: #fec544;
+}
+.skills .title::after{
+    background: #fec544;
+}
+.skills .skill-content .column{
+    margin-top: 40px;
+    width: calc(50% - 50px);
+}
+.skills .skill-content .left .text{
+    font-size: 27px;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: #fec544;
+}
+.skills .skill-content .left p{
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+    padding-top: 15px;
+}
+.skills .skill-content .left a{
+    display: inline-block;
+    background: #fec544;
+    color: #070808;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #fec544;
+    transition: all 0.3s ease;
+}
+.skills .skill-content .left a:hover{
+    color: #fec544;
+    background: none;
+}
+.skills .skill-content .right .bars{
+    margin-bottom: 20px;
+}
+.skills .skill-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    color: antiquewhite;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skill-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skill-content .right .line{
+    height: 2px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skill-content .right .line::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fec544;
+}
+.skills .skill-content .right .html::before{
+    width: 99%;
+}
+.skills .skill-content .right .css::before{
+    width: 90%;
+}
+.skills .skill-content .right .js::before{
+    width: 65%;
+}
+.skills .skill-content .right .uxd::before{
+    width: 50%;
+}
+
+
+/* contact section */
+.contact h1{
+    color: #6e6e70;
+    text-align: center;
+    font-size: 80px;
+    transform: translateY(20px);
+    opacity: 0.1;
+    padding-top: -20px;
+}
+.contact h5{
+    color: #070808;
+    font-weight: 700;
+    transform: translateY(-65px);
+}
+.contact .title::after{
+    background: #070808;
+}
+.contact .title::before{
+    background: #070808;
+}
+.contact .contact-content .column{
+    margin-top: 40px;
+    width: calc(50% - 50px);
+}
+.contact .contact-content .left h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #070808;
+}
+.contact .contact-content .left .form-group input{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #070808;
+    background: antiquewhite;
+    border-radius: 5px;
+}
+.contact .contact-content .left .form-group textarea{
+    width: 100%;
+    background: antiquewhite;
+    padding: 10px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.contact .contact-content .left .btn-xs{
+    padding: 8px 18px;
+    font-size: 16px;
+}
+.contact .contact-content .right{
+    color: #070808;
+}
+.contact .contact-content .right h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.contact .contact-content .right p{
+    line-height: 1.6;
+}
+.contact .contact-content .right .items{
+    margin:10px 0;
+}
+.contact .contact-content .right .items .item{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.contact .contact-content .right .items .item i{
+    padding: 16px;
+    border:1px solid #070808;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.contact .contact-content .right .items .item span{
+    font-size: 14px;
+}
+.contact .contact-content .right .links{
+    overflow: hidden;
+    padding: 10px 0;
+}
+.contact .contact-content .right .links li{
+    display: inline-block;
+    list-style: none;
+    padding-right: 15px;
+}
+.contact .contact-content .right .links li a{
+    color: #070808;
+}
+
+/* footer section */
+#footer{
+    text-align: center;
+    background: #070808;
+    padding: 30px 0;
+    color: white;
+    font-weight: 700;
+}
+
+/* scroll up style */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    border: 1px solid white;
+    background: #070808;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color:#fff;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: none;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
 }
